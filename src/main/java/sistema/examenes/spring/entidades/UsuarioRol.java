@@ -1,5 +1,7 @@
 package sistema.examenes.spring.entidades;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -7,9 +9,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor //Constructor lleno
+@NoArgsConstructor  //Constructor vacio
 @Entity
 public class UsuarioRol {
 	@Id
@@ -22,4 +31,33 @@ public class UsuarioRol {
 	
 	@ManyToOne
 	private Rol rol;
+
+	/*
+	public Long getUsuarioRolId() {
+		return usuarioRolId;
+	}
+
+	public void setUsuarioRolId(Long usuarioRolId) {
+		this.usuarioRolId = usuarioRolId;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
+	public Rol getRol() {
+		return rol;
+	}
+
+	public void setRol(Rol rol) {
+		this.rol = rol;
+	}
+	
+	public UsuarioRol() {
+		
+	}*/
 }
